@@ -146,7 +146,8 @@
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update",
     "build": "grunt",
     "start": "grunt serve",
-    "postinstall": "bower install"
+    "postinstall": "bower install",
+    "preinstall": "grunt"
   },
   "private": true,
   "files": [
