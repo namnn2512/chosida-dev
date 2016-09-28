@@ -221,7 +221,7 @@ module.exports = function (grunt) {
         files: {
           src: [
             '<%= yeoman.dist %>/public/{,*/}*.js',
-            '<%= yeoman.dist %>/public/{,*/}*.css$',
+            '<%= yeoman.dist %>/public/{,*/}*.css',
             '<%= yeoman.dist %>/public/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/public/assets/icons/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/public/assets/iconsets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
@@ -244,7 +244,10 @@ module.exports = function (grunt) {
     // Performs rewrites based on rev and the useminPrepare configuration
     usemin: {
       html: ['<%= yeoman.dist %>/public/{,*/}*.html'],
-      css: ['<%= yeoman.dist %>/public/{,*/}*.css'],
+      css: ['<%= yeoman.dist %>/public/{,*/}*.css',
+            '!<%= yeoman.dist %>/public/bower_components/animate.css',
+            '<%= yeoman.dist %>/public/bower_components/animate.css/animate.css',
+           ],
       js: ['<%= yeoman.dist %>/public/{,*/}*.js'],
       options: {
         assetsDirs: [
