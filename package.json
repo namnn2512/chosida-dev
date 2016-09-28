@@ -1,10 +1,7 @@
 {
   "name": "chosida",
   "version": "0.0.0",
-  "main": "lib/grunt",
-  "bin": {
-    "grunt": "bin/grunt"
-  },
+  "main": "server/index.js",
   "dependencies": {
     "express": "~4.9.0",
     "morgan": "~1.0.0",
@@ -148,9 +145,5 @@
     "start": "grunt serve",
     "postinstall": "bower install && npm install -g grunt-cli"
   },
-  "private": true,
-  "files": [
-    "lib",
-    "bin"
-  ]
+  "private": true
 }
