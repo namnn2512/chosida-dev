@@ -5,7 +5,7 @@
 module.exports = {
   // MongoDB connection options
   mongo: {
-    uri: 'mongodb://localhost/chosida-dev'
+    uri: 'mongodb://chosidauser:Abcde12345-@ds035766.mlab.com:35766/chosidadb'
   },
 
   seedDB: true
