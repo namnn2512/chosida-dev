@@ -146,8 +146,7 @@
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update",
     "build": "grunt",
     "start": "grunt serve",
-    "postinstall": "bower install",
-    "preinstall": "which -s grunt && grunt --version | grep grunt-cli > /dev/null 2>&1; if [[ \"$?\" != 0 ]]; then npm install grunt-cli -g; exit 0; fi"
+    "postinstall": "bower install && npm install -g grunt-cli"
   },
   "private": true,
   "files": [
