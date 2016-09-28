@@ -142,7 +142,7 @@
     "test": "grunt test",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update",
     "build": "grunt",
-    "start": "grunt serve",
+    "start": "grunt serve:dist",
     "postinstall": "bower install && npm install -g grunt-cli"
   },
   "private": true
