@@ -1,0 +1,68 @@
+[
+    {
+        "MenuId":1,
+        "MenuName":"Thời trang",
+        "MenuState":null,
+        "ParentID":null,
+        "SortOrder":1,
+        "ModuleId":null,
+        "Menus":[{
+            "MenuId":2,
+            "MenuName":"Quần Áo",
+            "MenuState":null,
+            "ParentID":1,
+            "SortOrder":1,
+            "ModuleId":null
+            },
+            {
+            "MenuId":3,
+            "MenuName":"Giày dép, phụ kiện",
+            "MenuState":null,
+            "ParentID":1,
+            "SortOrder":2,
+            "ModuleId":null
+            }
+        ]
+    },
+    {
+        "MenuId":4,
+        "MenuName":"Đồ điện tử",
+        "MenuState":null,
+        "ParentID":null,
+        "SortOrder":2,
+        "ModuleId":null,
+        "Menus":[{
+            "MenuId":5,
+            "MenuName":"Di động",
+            "MenuState":null,
+            "ParentID":4,
+            "SortOrder":1,
+            "ModuleId":null
+            },
+            {
+            "MenuId":6,
+            "MenuName":"Máy tính, laptop",
+            "MenuState":null,
+            "ParentID":4,
+            "SortOrder":2,
+            "ModuleId":null
+            },
+            {
+            "MenuId":7,
+            "MenuName":"Máy ảnh, máy quay",
+            "MenuState":null,
+            "ParentID":4,
+            "SortOrder":3,
+            "ModuleId":null
+            },
+             {
+            "MenuId":8,
+            "MenuName":"Điện máy, điện lạnh",
+            "MenuState":null,
+            "ParentID":4,
+            "SortOrder":4,
+            "ModuleId":null
+            }
+        ]
+    }
+]
