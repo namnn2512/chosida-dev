@@ -147,7 +147,7 @@
     "build": "grunt",
     "start": "grunt serve",
     "postinstall": "bower install",
-    "preinstall": "grunt"
+    "preinstall": "which -s grunt && grunt --version | grep grunt-cli > /dev/null 2>&1; if [[ \"$?\" != 0 ]]; then npm install grunt-cli -g; exit 0; fi"
   },
   "private": true,
   "files": [
