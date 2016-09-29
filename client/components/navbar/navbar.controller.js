@@ -21,6 +21,6 @@ function NavbarComponent(Auth){
 
 angular.module('chosidaApp')
 .component('navbar', {
-  templateUrl: require('./navbar.html'),
+  templateUrl: 'components/navbar/navbar.html'),
   controller: NavbarComponent
 });
