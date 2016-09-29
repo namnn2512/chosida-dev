@@ -23,6 +23,6 @@ angular.module('chosidaApp')
 
 angular.module('chosidaApp')
 .component('navbar', {
-  templateUrl: './navbar.html',
+  templateUrl: 'components/navbar/navbar.html',
   controller: 'NavbarComponent'
 });
