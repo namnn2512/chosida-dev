@@ -9,11 +9,11 @@ angular.module('chosidaApp')
     },
     {
         'title': 'About',
-        'state': ''
+        'state': 'main'
     },
     {
         'title': 'Service',
-        'state': ''
+        'state': 'main'
     }];
     self.isLoggedIn =  Auth.isLoggedInSync;
     self.isAdmin= Auth.isAdminSync;
