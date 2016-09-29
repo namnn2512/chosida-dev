@@ -3,6 +3,6 @@
 function FooterComponent(){};
 angular.module('chosidaApp')
 .component('footer', {
-  templateUrl: require('./footer.html'),
+  template: require('./footer.html'),
   controller: FooterComponent
 });
