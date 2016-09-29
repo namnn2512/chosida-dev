@@ -1,0 +1,73 @@
+.navbar-default {
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #ccc;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.89);
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-brand:hover,
+.navbar-default .navbar-brand:focus {
+    color: #1aace3;
+    font-size: 12px;
+    transition: .1s all;
+}
+
+.navbar-header {
+    padding-left: 20px;
+}
+
+.navbar-collapse ul li {
+    padding-right: 30px;
+}
+
+.navbar-collapse ul li a {
+    line-height: 25px;
+    color: #aaaaaa;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    -webkit-transition: .2s all;
+    -o-transition: .2s all;
+    transition: .2s all;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+    color: #1aace3;
+    border-bottom: solid 3px;
+    border-bottom-color: #1aace3;
+    transition: .2s all;
+    font-size: 10px;
+}
+.navbar-default .navbar-nav > .active > a
+, .navbar-default .navbar-nav > .active > a:hover
+, .navbar-default .navbar-nav > .active > a:focus{
+    background-color: transparent;
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .navbar-default .navbar-nav {
+        background: rgba(255, 255, 255, 0.89);
+        text-align: center;
+    }
+    .navbar-collapse {
+        float: none;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1199px) {
+    .navbar-default .navbar-nav {
+        background: rgba(255, 255, 255, 0.89);
+    }
+    .navbar-default .navbar-nav {
+        font-size: 10px;
+    }
+}
