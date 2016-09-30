@@ -10,9 +10,6 @@
     var directive = {
       restrict: 'E',
       templateUrl: 'components/leftbar/leftbar.html',
-      scope: {
-          creationDate: '='
-      },
       controller: LeftbarController,
       controllerAs: 'leftbar',
       bindToController: true
