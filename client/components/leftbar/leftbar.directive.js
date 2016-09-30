@@ -14,15 +14,20 @@
           creationDate: '='
       },
       controller: LeftbarController,
-      controllerAs: 'vm',
+      controllerAs: 'leftbar',
       bindToController: true
     };
 
     return directive;
 
     /** @ngInject */
-    function LeftbarController() {
-      //var vm = this;
+    function LeftbarController($http) {
+      var vm = this;
+      $http.get('components/utils/menu.json').then(function(response) {
+        vm.menu = response.data;
+        console.log(vm.menu);
+      });
+
     }
   }
 

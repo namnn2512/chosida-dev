@@ -14,19 +14,36 @@
     height:500px;
 }
 
+#leftbar .navbar-default .navbar-nav li {
+	list-style: none;
+    padding-top:10px;
+}
+ 
 #leftbar .navbar-default .navbar-nav li > a {
     text-decoration: none;
-    width: 0px;
+    width: 70px;
     -webkit-transition: 0.5s ease;
 	transition: 0.5s ease;
-	margin-right: 100px;
-	margin-left: 40px;
+	text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-left: 5px;
 }
 
 #leftbar .navbar-default .navbar-nav li > a:hover {
-    -webkit-transition: 0.2s ease;
-            transition: 0.2s ease;
-    width: 85px	;
+    -webkit-transition: 0.7s ease;
+            transition: 0.7s ease;
+    width: 150px;
 	border-bottom: solid 2px;
     border-bottom-color: #1aace3;
 }
+#leftbar .navbar-default .navbar-nav li:hover .collapse{
+    display: block;
+    height: auto;
+    background-color: #fff;
+}
+#leftbar .navbar-default .navbar-nav .sub-text {
+	font-size: 12px;
+	margin-left: -5px;
+	margin-top: 10px;
+}
+
