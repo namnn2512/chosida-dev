@@ -15,9 +15,9 @@ angular.module('chosidaApp')
         'title': 'Service',
         'state': 'main'
     }];
-    self.isLoggedIn =  Auth.isLoggedInSync;
-    self.isAdmin= Auth.isAdminSync;
-    self.getCurrentUser= Auth.getCurrentUserSync;
+     self.isLoggedIn =  Auth.isLoggedIn;
+    self.isAdmin= Auth.isAdmin;
+    self.getCurrentUser= Auth.getCurrentUser;
     self.isCollapsed = true;
 });
 
