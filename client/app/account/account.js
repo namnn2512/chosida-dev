@@ -8,6 +8,18 @@ angular.module('chosidaApp')
         templateUrl: 'app/account/login/login.html',
         controller: 'LoginCtrl'
       })
+      .state('logout', {
+          url: '/logout?referrer',
+          referrer: 'main',
+          template: '',
+          controller: function($state, Auth) {
+            var referrer = $state.params.referrer
+                          || $state.current.referrer
+                          || 'main';
+            Auth.logout();
+            $state.go(referrer);
+          }
+        })
       .state('signup', {
         url: '/signup',
         templateUrl: 'app/account/signup/signup.html',
