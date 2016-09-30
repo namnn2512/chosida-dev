@@ -28,6 +28,7 @@
       <link rel="stylesheet" href="app/app.css">
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="components/footer/footer.css">
+      <link rel="stylesheet" href="components/leftbar/leftbar.css">
       <link rel="stylesheet" href="components/navbar/navbar.css">
       <!-- endinjector -->
     <!-- endbuild -->
@@ -40,7 +41,14 @@
 
     <!-- Add your site or application content here -->
     <navbar></navbar>
-    <div ui-view=""></div>
+    <div>
+      <div class="col-md-2 col-sm-3 left-view">
+        <left-shop></left-shop>
+      </div>
+      <div class="col-md-10 col-sm-9 main-view">
+        <div ui-view=""></div>      
+      </div>
+    </div>
     <footer></footer>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>
@@ -75,6 +83,7 @@
       <!-- endbower -->
       <script src="socket.io-client/socket.io.js"></script>
     <!-- endbuild -->
+      <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
         
         <!-- build:js({.tmp,client}) app/app.js -->
@@ -92,6 +101,7 @@
           <script src="components/auth/auth.service.js"></script>
           <script src="components/auth/user.service.js"></script>
           <script src="components/footer/footer.controller.js"></script>
+          <script src="components/leftbar/leftbar.directive.js"></script>
           <script src="components/mongoose-error/mongoose-error.directive.js"></script>
           <script src="components/navbar/navbar.controller.js"></script>
           <script src="components/shell/dialog/dialog.controller.js"></script>

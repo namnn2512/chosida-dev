@@ -67,13 +67,13 @@ module.exports = function (grunt) {
         files: ['server/**/*.spec.js'],
         tasks: ['env:test', 'mochaTest']
       },
-      jsTest: {
-        files: [
-          '<%= yeoman.client %>/{app,components}/**/*.spec.js',
-          '<%= yeoman.client %>/{app,components}/**/*.mock.js'
-        ],
-        tasks: ['newer:jshint:all', 'karma']
-      },
+      // jsTest: {
+      //   files: [
+      //     '<%= yeoman.client %>/{app,components}/**/*.spec.js',
+      //     '<%= yeoman.client %>/{app,components}/**/*.mock.js'
+      //   ],
+      //   tasks: ['newer:jshint:all', 'karma']
+      // },
       gruntfile: {
         files: ['Gruntfile.js']
       },
@@ -423,13 +423,13 @@ module.exports = function (grunt) {
       ]
     },
 
-    // Test settings
+   /* // Test settings
     karma: {
       unit: {
         configFile: 'karma.conf.js',
         singleRun: true
       }
-    },
+    },*/
 
     mochaTest: {
       options: {
@@ -552,7 +552,6 @@ module.exports = function (grunt) {
       'autoprefixer',
       'express:dev',
       'wait',
-      'open',
       'watch'
     ]);
   });
@@ -577,8 +576,8 @@ module.exports = function (grunt) {
         'env:all',
         'concurrent:test',
         'injector',
-        'autoprefixer',
-        'karma'
+        'autoprefixer'
+        // 'karma'
       ]);
     }
 

@@ -1,5 +1,4 @@
 #main {
-    padding-top: 100px;
     text-align: center;
 }
 
@@ -120,4 +119,5 @@ a:focus > h3 {
 }
 .see-more h4{
   float:right;
+  padding-right: 15px;
 }

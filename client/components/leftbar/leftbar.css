@@ -1,0 +1,32 @@
+#leftbar .navbar-fixed-left {
+    width: 170px;
+    position: fixed;
+    border-radius: 4;
+    height: 100%;
+    display: block;
+    z-index: 10;
+    margin-top: 100px;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.89);
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-weight: bold;
+    height:500px;
+}
+
+#leftbar .navbar-default .navbar-nav li > a {
+    text-decoration: none;
+    width: 0px;
+    -webkit-transition: 0.5s ease;
+	transition: 0.5s ease;
+	margin-right: 100px;
+	margin-left: 40px;
+}
+
+#leftbar .navbar-default .navbar-nav li > a:hover {
+    -webkit-transition: 0.2s ease;
+            transition: 0.2s ease;
+    width: 85px	;
+	border-bottom: solid 2px;
+    border-bottom-color: #1aace3;
+}
