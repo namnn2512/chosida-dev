@@ -1,0 +1,101 @@
+[
+    {
+        "MenuId":1,
+        "MenuName":"Thời trang",
+        "MenuState":null,
+        "ParentID":1,
+        "SortOrder":1,
+        "ModuleId":null,
+        "Menus":[{
+            "MenuId":2,
+            "subMenu":"Quần Áo",
+            "MenuState":null,
+            "ParentID":1,
+            "SortOrder":1,
+            "ModuleId":null
+            },
+            {
+            "MenuId":3,
+            "subMenu":"Giày dép",
+            "MenuState":null,
+            "ParentID":1,
+            "SortOrder":2,
+            "ModuleId":null
+            },
+            {
+            "MenuId":4,
+            "subMenu":"Phụ kiện",
+            "MenuState":null,
+            "ParentID":1,
+            "SortOrder":2,
+            "ModuleId":null
+            }
+        ]
+    },
+    {
+        "MenuId":5,
+        "MenuName":"Đồ điện tử",
+        "MenuState":null,
+        "ParentID":2,
+        "SortOrder":2,
+        "ModuleId":null,
+        "Menus":[{
+            "MenuId":6,
+            "subMenu":"Di động",
+            "MenuState":null,
+            "ParentID":2,
+            "SortOrder":1,
+            "ModuleId":null
+            },
+            {
+            "MenuId":7,
+            "subMenu":"Máy tính",
+            "MenuState":null,
+            "ParentID":2,
+            "SortOrder":2,
+            "ModuleId":null
+            },
+            {
+            "MenuId":8,
+            "subMenu":"Laptop",
+            "MenuState":null,
+            "ParentID":2,
+            "SortOrder":2,
+            "ModuleId":null
+            },
+            {
+            "MenuId":9,
+            "subMenu":"Máy ảnh",
+            "MenuState":null,
+            "ParentID":2,
+            "SortOrder":3,
+            "ModuleId":null
+            },
+             {
+            "MenuId":10,
+            "subMenu":"Máy quay",
+            "MenuState":null,
+            "ParentID":2,
+            "SortOrder":4,
+            "ModuleId":null
+            }
+            ,
+             {
+            "MenuId":11,
+            "subMenu":"Điện máy",
+            "MenuState":null,
+            "ParentID":2,
+            "SortOrder":4,
+            "ModuleId":null
+            } 
+            ,{
+            "MenuId":12,
+            "subMenu":"Điện lạnh",
+            "MenuState":null,
+            "ParentID":2,
+            "SortOrder":4,
+            "ModuleId":null
+            }
+        ]
+    }
+]
