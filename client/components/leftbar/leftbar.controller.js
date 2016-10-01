@@ -5,7 +5,6 @@ angular.module('chosidaApp')
     var self = this;
      $http.get('../components/utils/menu.json').then(function(response) {
       self.menu = response.data;
-      console.log(self.menu);
     });
 });
 
