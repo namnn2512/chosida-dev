@@ -7,7 +7,7 @@
                     <hr>
                 </div>
                 <div ng-repeat="item in [1,2,3,4,5,6,7,8] track by $index">
-                    <div class="col-md-3 col-xs-12 col-sm-6">
+                    <div class="col-md-3 col-xs-12 col-sm-6" ng-click="main.goDetail()">
                         <div class="thumbnail">
                             <a href="#"><h3>{{main.awesomeThings[0].name}}</h3></a>
                             <div class="hovereffect">
