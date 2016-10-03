@@ -8,7 +8,7 @@
         "ModuleId":null,
         "Menus":[{
             "MenuId":2,
-            "MenuName":"Quần Áo",
+            "subMenu":"Quần Áo",
             "MenuState":null,
             "ParentID":1,
             "SortOrder":1,
@@ -16,7 +16,7 @@
             },
             {
             "MenuId":3,
-            "MenuName":"Giày dép",
+            "subMenu":"Giày dép",
             "MenuState":null,
             "ParentID":1,
             "SortOrder":2,
@@ -24,7 +24,7 @@
             },
             {
             "MenuId":4,
-            "MenuName":"Phụ kiện",
+            "subMenu":"Phụ kiện",
             "MenuState":null,
             "ParentID":1,
             "SortOrder":2,
@@ -41,7 +41,7 @@
         "ModuleId":null,
         "Menus":[{
             "MenuId":6,
-            "MenuName":"Di động",
+            "subMenu":"Di động",
             "MenuState":null,
             "ParentID":2,
             "SortOrder":1,
@@ -49,7 +49,7 @@
             },
             {
             "MenuId":7,
-            "MenuName":"Máy tính",
+            "subMenu":"Máy tính",
             "MenuState":null,
             "ParentID":2,
             "SortOrder":2,
@@ -57,7 +57,7 @@
             },
             {
             "MenuId":8,
-            "MenuName":"Laptop",
+            "subMenu":"Laptop",
             "MenuState":null,
             "ParentID":2,
             "SortOrder":2,
@@ -65,7 +65,7 @@
             },
             {
             "MenuId":9,
-            "MenuName":"Máy ảnh",
+            "subMenu":"Máy ảnh",
             "MenuState":null,
             "ParentID":2,
             "SortOrder":3,
@@ -73,7 +73,7 @@
             },
              {
             "MenuId":10,
-            "MenuName":"Máy quay",
+            "subMenu":"Máy quay",
             "MenuState":null,
             "ParentID":2,
             "SortOrder":4,
@@ -82,7 +82,7 @@
             ,
              {
             "MenuId":11,
-            "MenuName":"Điện máy",
+            "subMenu":"Điện máy",
             "MenuState":null,
             "ParentID":2,
             "SortOrder":4,
@@ -90,7 +90,7 @@
             } 
             ,{
             "MenuId":12,
-            "MenuName":"Điện lạnh",
+            "subMenu":"Điện lạnh",
             "MenuState":null,
             "ParentID":2,
             "SortOrder":4,

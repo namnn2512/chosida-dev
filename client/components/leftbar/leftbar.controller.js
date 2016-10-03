@@ -3,9 +3,11 @@
 angular.module('chosidaApp')
   .controller('LeftbarController',function ($http){
     var self = this;
-     $http.get('components/utils/menu.json').then(function(response) {
+    $http.get('/menu').then(function(response) {
       self.menu = response.data;
-      console.log(self.menu);
+    },
+    function(response){
+        //error callback
     });
 });
 
