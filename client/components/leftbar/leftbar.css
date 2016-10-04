@@ -11,7 +11,7 @@
     background: rgba(255, 255, 255, 0.89);
     font-family: "Open Sans", Helvetica, sans-serif;
     font-weight: bold;
-    height: 500px;
+    height: auto;
 }
 
 #leftbar .navbar-default .navbar-nav li {
@@ -42,6 +42,7 @@
     display: block;
     height: auto;
     background-color: #fff;
+    z-index: 10000;
 }
 
 #leftbar .navbar-default .navbar-nav .sub-text {

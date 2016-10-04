@@ -27,7 +27,6 @@
 /**
  * App-wide Styles
  */
-
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -37,6 +36,7 @@
 .main-view {
   padding-right: 25px;
   padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {

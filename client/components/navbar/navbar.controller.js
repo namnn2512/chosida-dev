@@ -4,16 +4,16 @@ angular.module('chosidaApp')
   .controller('NavbarComponent',function (Auth){
     var self = this;
     self.menu = [{
-        'title': 'Home',
-        'state': 'main'
+        "title" : "Home",
+        "state": "main"
     },
     {
-        'title': 'About',
-        'state': 'main'
+        "title": "About",
+        "state": "main"
     },
     {
-        'title': 'Service',
-        'state': 'main'
+        "title": "Service",
+        "state": "main"
     }];
      self.isLoggedIn =  Auth.isLoggedIn;
     self.isAdmin= Auth.isAdmin;
