@@ -1,7 +1,8 @@
 'use strict';
 
 angular.module('chosidaApp')
-  .controller('SignupCtrl', function ($scope, Auth, $location, $window) {
+  .controller('SignupCtrl', function ($scope, Auth, $location, $window, $state) {
+    var vm = this;
     $scope.user = {};
     $scope.errors = {};
 
@@ -34,4 +35,7 @@ angular.module('chosidaApp')
     $scope.loginOauth = function(provider) {
       $window.location.href = '/auth/' + provider;
     };
+    vm.goLogin = function() {
+      $state.go('login');
+    }
   });

@@ -1,0 +1,28 @@
+#signup {
+    padding-bottom: 15px;
+}
+
+#signup .signup-header {
+    text-align: center;
+    font-weight: 300;
+}
+
+#signup .signup-header h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#signup .signup-header p {
+    padding: 20px 0px;
+}
+
+#signup .signup-header p,
+span {
+    color: #777;
+    font-size: 15px;
+}
+
+#signup .signup-header button {
+    font-size: 20px;
+    font-weight: 500;
+}

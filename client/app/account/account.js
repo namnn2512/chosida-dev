@@ -6,7 +6,8 @@ angular.module('chosidaApp')
       .state('login', {
         url: '/login',
         templateUrl: 'app/account/login/login.html',
-        controller: 'LoginCtrl'
+        controller: 'LoginCtrl',
+        controllerAs :'login'
       })
       .state('logout', {
           url: '/logout?referrer',
@@ -23,7 +24,8 @@ angular.module('chosidaApp')
       .state('signup', {
         url: '/signup',
         templateUrl: 'app/account/signup/signup.html',
-        controller: 'SignupCtrl'
+        controller: 'SignupCtrl',
+        controllerAs : 'signup'
       })
       .state('settings', {
         url: '/settings',
