@@ -1,12 +1,19 @@
-.login-card, .register-card {
-  max-width: 300px;
-  margin: 0 auto;
+#login {
+    padding-bottom: 15px;
 }
 
-.love-message {
-  margin-top: 64px;
-  text-align: center;
+#login .login-card,
+.register-card {
+    max-width: 300px;
+    margin: 0 auto;
 }
+
+#login .love-message {
+    margin-top: 64px;
+    text-align: center;
+}
+
+
 /*
 
 .btn-facebook {
@@ -26,3 +33,28 @@
   background-color: #fafafa;
   border-color: #ccc;
 }*/
+
+#login .signin-header {
+    text-align: center;
+    font-weight: 300;
+}
+
+#login .signin-header h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+#login .signin-header p {
+    padding: 20px 0px;
+}
+
+#login .signin-header p,
+span {
+    color: #777;
+    font-size: 15px;
+}
+
+#login .signin-header button {
+    font-size: 20px;
+    font-weight: 500;
+}

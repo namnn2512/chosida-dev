@@ -28,7 +28,7 @@ angular.module('chosidaApp')
       },
       {
         imgId :4,
-        name: 'iphone1',
+        name: 'iphone1 iphone1',
         subImg : 'assets/images/iphone.jpg'
       }]
   	}]

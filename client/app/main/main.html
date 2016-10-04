@@ -1,32 +1,32 @@
 <section id="main">
-    <div class="">
-        <div ng-repeat="item in [1,2,3,4] track by $index">
-            <div class="row">
-                <div class="store-header">
-                    <h1>Fashion</h1>
-                    <hr>
-                </div>
-                <div ng-repeat="item in [1,2,3,4,5,6,7,8] track by $index">
-                    <div class="col-md-3 col-xs-12 col-sm-6" ng-click="main.goDetail()">
-                        <div class="thumbnail">
-                            <a href="#"><h3>{{main.awesomeThings[0].name}}</h3></a>
-                            <div class="hovereffect">
-                                <a href="#"><img src="{{main.awesomeThings[0].image}}" alt=""></a>
-                                <div class="overlay">
-                                    <h2>{{main.awesomeThings[0].name}}</h2>
-                                    <a class="info" href="#">See Detail</a>
-                                </div>
-                            </div>
-                            <div class="caption">
-                                <p>{{main.awesomeThings[0].description}}</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="see-more">
-                    <a href="#"><h4>See More>></h4></a>
-                </div>
-            </div>
+  <div class="">
+    <div ng-repeat="item in [1,2,3,4] track by $index">
+      <div class="row">
+        <div class="store-header">
+          <h1>Fashion</h1>
+          <hr>
         </div>
+        <div ng-repeat="item in [1,2,3,4,5,6,7,8] track by $index">
+          <div class="col-md-3 col-xs-12 col-sm-6">
+            <div class="thumbnail">
+              <a ng-click="main.goDetail()"><h3>{{main.awesomeThings[0].name}}</h3></a>
+              <div class="hovereffect">
+                <a href="#"><img src="{{main.awesomeThings[0].image}}" alt=""></a>
+                <div class="overlay">
+                  <h2>{{main.awesomeThings[0].name}}</h2>
+                  <a class="info" ng-click="main.goDetail()">See Detail</a>
+                </div>
+              </div>
+              <div class="caption">
+                <p>{{main.awesomeThings[0].description}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="see-more">
+          <a href="#"><h4>See More>></h4></a>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
