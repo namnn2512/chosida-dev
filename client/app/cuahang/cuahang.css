@@ -1,0 +1,10 @@
+#store-detail .store-header {
+	border-bottom : solid #ccc 1px;
+}
+#store-detail .product {
+	text-align:center;
+}
+#store-detail h1 {
+	text-decoration:underline;
+	padding-bottom:30px;
+}

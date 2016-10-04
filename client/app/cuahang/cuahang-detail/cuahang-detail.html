@@ -1,3 +1,27 @@
 <section id="store-detail">
-	<h1>This is store detail</h1>
+  <div class="container-fluid">
+    <div class="row store-header">
+      <div class="col-md-3 col-sm-5 col-xs-12 col-md-offset-2">
+        <div class="detail-content">
+          <div class="pro-image">
+            <img ng-src="{{detail.storeDetail[0].image}}"></img>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-7 col-sm-7 col-xs-12">
+        <div class="store-detail-infor">
+          <h3>{{detail.storeDetail[0].name}}</h3>
+          <h3>{{detail.storeDetail[0].store}}</h3>
+          <p>{{detail.storeDetail[0].description}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row product">
+      <h1>Product</h1>
+      <div class="col-md-3" ng-repeat="image in detail.storeDetail[0].product">
+        <a>{{image.name}}</a>
+        <img ng-src="{{image.subImg}}"></img>
+      </div>
+    </div>
+  </div>
 </section>
