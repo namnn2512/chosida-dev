@@ -4,16 +4,16 @@ var mongoose = require('mongoose'),
     Schema = mongoose.Schema;
 
 var StoreSchema = new Schema({
-  name: String,
+  name: { type: String, required: true},
   info: String,
   active: Boolean,
   address: String,
-  cityId: int,
+  cityId: Number,
   imgUrl: String,
-  userId: String,
-  categoryId: int,
-  parentCategoryId:int,
-  createDate: date
+  userId: { type: String, required: true},
+  categoryId: Number,
+  parentCategoryId:Number,
+  createDate: { type: Date, default: Date.now}
 });
 
 module.exports = mongoose.model('Store', StoreSchema);
