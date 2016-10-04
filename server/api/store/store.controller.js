@@ -29,6 +29,14 @@ exports.show = function(req, res) {
   });
 };
 
+// Get a list stores by userid
+exports.getListStoresbyUserId = function(req, res) {
+  Store.find({ userId : req.params.id }, function(err, stores){
+     if(err) { return handleError(res, err); }
+    return res.status(200).json(stores);
+  });
+};
+
 // Creates a new store in the DB.
 exports.create = function(req, res) {
   Store.create(req.body, function(err, store) {
