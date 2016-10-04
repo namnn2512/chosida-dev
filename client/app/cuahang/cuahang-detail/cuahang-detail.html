@@ -8,7 +8,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-7 col-sm-7 col-xs-12">
+      <div class="col-md-7 col-sm-7 col-xs-12>
         <div class="store-detail-infor">
           <h3>{{detail.storeDetail[0].name}}</h3>
           <h3>{{detail.storeDetail[0].store}}</h3>
@@ -18,10 +18,17 @@
     </div>
     <div class="row product">
       <h1>Product</h1>
-      <div class="col-md-3" ng-repeat="image in detail.storeDetail[0].product">
-        <a>{{image.name}}</a>
-        <img ng-src="{{image.subImg}}"></img>
+      <div class="col-md-3 col-xs-6 col-sm-6" ng-repeat="image in detail.storeDetail[0].product">
+        <div class="thumbnail">
+          <a ng-click=""><h3>{{image.name}}</h3></a>
+          <div class="hovereffect1">
+            <a href="#"><img src="{{image.subImg}}" alt=""></a>
+            <div class="overlay1">
+              <h2>{{detail.storeDetail[0].name}}</h2>
+              <a class="info" ng-click="">See Detail</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 </section>
