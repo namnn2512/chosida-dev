@@ -9,11 +9,11 @@ module.exports = {
   DOMAIN: 'http://localhost:9000',
   SESSION_SECRET: "chosida-secret",
 
-  FACEBOOK_ID: 'app-id',
-  FACEBOOK_SECRET: 'secret',
+  FACEBOOK_ID: '658442930940076',
+  FACEBOOK_SECRET: 'e9332819c8c7e12ef78d315b1824c7cd',
 
-  GOOGLE_ID: 'app-id',
-  GOOGLE_SECRET: 'secret',
+  GOOGLE_ID: '403136864361-ecso61meoqqpk96ju75thjrq8tqphif4.apps.googleusercontent.com',
+  GOOGLE_SECRET: 'r6JiefbC7sjcl8-FEGsvsbWn',
 
   // Control debug level for modules using visionmedia/debug
   DEBUG: ''
