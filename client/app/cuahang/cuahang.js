@@ -11,10 +11,9 @@ angular.module('chosidaApp')
           'store':null,
           'id':null
         }
-<<<<<<< HEAD
       })
       .state('sanpham', {
-        url: '/:store/:id/:idsanpham',
+        url: '/cuahang/:store/:id/:idsanpham',
         templateUrl: 'app/cuahang/productDetail/productDetail.html',
         controller: 'StoreDetailController',
         params : {
@@ -22,12 +21,10 @@ angular.module('chosidaApp')
           'id':null,
           'idsanpham' : null
         }
-=======
       }).state('addcuahang', {
         url: '/themcuahang',
         templateUrl: 'app/cuahang/addCuaHang/addCuaHang.html',
         controller: 'AddStoreCtrl',
         controllerAs :'addStore'
->>>>>>> b4078ef8fb5afbef8b769c45a84a862eeabe85f6
       });
   });
