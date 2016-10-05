@@ -4,7 +4,7 @@ angular.module('chosidaApp')
   .config(function ($stateProvider) {
     $stateProvider
       .state('cuahang', {
-        url: '/:store/:id',
+        url: 'cuahang/:store/:id',
         templateUrl: 'app/cuahang/cuahang-detail/cuahang-detail.html',
         controller: 'StoreDetailController',
         controllerAs :'detail',
@@ -12,5 +12,10 @@ angular.module('chosidaApp')
           'store':null,
           'id':null
         }
+      }).state('addcuahang', {
+        url: '/themcuahang',
+        templateUrl: 'app/cuahang/addCuaHang/addCuaHang.html',
+        controller: 'AddStoreCtrl',
+        controllerAs :'addStore'
       });
   });
