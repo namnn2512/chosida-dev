@@ -4,28 +4,28 @@
       <div class="col-md-3 col-sm-5 col-xs-12 col-md-offset-2">
         <div class="detail-content">
           <div class="pro-image">
-            <img ng-src="{{detail.storeDetail[0].image}}"></img>
+            <img ng-src="{{storeDetail[0].image}}"></img>
           </div>
         </div>
       </div>
       <div class="col-md-7 col-sm-7 col-xs-12>
         <div class="store-detail-infor">
-          <h3>{{detail.storeDetail[0].name}}</h3>
-          <h3>{{detail.storeDetail[0].store}}</h3>
-          <p>{{detail.storeDetail[0].description}}</p>
+          <h3>{{storeDetail[0].name}}</h3>
+          <h3>{{storeDetail[0].store}}</h3>
+          <p>{{storeDetail[0].description}}</p>
         </div>
       </div>
     </div>
     <div class="row product">
       <h1>Product</h1>
-      <div class="col-md-3 col-xs-6 col-sm-6" ng-repeat="image in detail.storeDetail[0].product">
+      <div class="col-md-3 col-xs-6 col-sm-6" ng-repeat="image in storeDetail[0].product">
         <div class="thumbnail">
-          <a ng-click=""><h3>{{image.name}}</h3></a>
+          <a ng-click="goDetail(image)"><h3>{{image.name}}</h3></a>
           <div class="hovereffect1">
             <a href="#"><img src="{{image.subImg}}" alt=""></a>
             <div class="overlay1">
-              <h2>{{detail.storeDetail[0].name}}</h2>
-              <a class="info" ng-click="">See Detail</a>
+              <h2>{{storeDetail[0].name}}</h2>
+              <a class="info" ng-click="goDetail(image)">See Detail</a>
             </div>
           </div>
         </div>
