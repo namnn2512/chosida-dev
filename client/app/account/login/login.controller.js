@@ -2,7 +2,6 @@
 
 angular.module('chosidaApp')
   .controller('LoginCtrl', function ($state, $scope, Auth, $location, $window) {
-    var vm = this;
     $scope.user = {};
     $scope.errors = {};
 
@@ -27,7 +26,7 @@ angular.module('chosidaApp')
     $scope.loginOauth = function(provider) {
       $window.location.href = '/auth/' + provider;
     };
-    vm.goSignup = function() {
+    $scope.goSignup = function() {
       $state.go('signup');
     }
   });
