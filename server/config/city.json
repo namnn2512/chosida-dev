@@ -1,0 +1,254 @@
+[
+    {
+        "city": "An Giang",
+        "abbr": "AGI"
+    },
+    {
+        "city": "Bắc Giang",
+        "abbr": "BGI"
+    },
+    {
+        "city": "Bắc Kạn",
+        "abbr": "BKA"
+    },
+    {
+        "city": "Bạc Liêu",
+        "abbr": "BLI"
+    },
+    {
+        "city": "Bắc Ninh",
+        "abbr": "BNI"
+    },
+    {
+        "city": "Bà Rịa - Vũng Tàu",
+        "abbr": "BRV"
+    },
+    {
+        "city": "Bến Tre",
+        "abbr": "BTR"
+    },
+    {
+        "city": "Bình Định",
+        "abbr": "BDI"
+    },
+    {
+        "city": "Bình Dương",
+        "abbr": "BDU"
+    },
+    {
+        "city": "Bình Phước",
+        "abbr": "BPH"
+    },
+    {
+        "city": "Bình Thuận",
+        "abbr": "BTH"
+    },
+    {
+        "city": "Cà Mau",
+        "abbr": "CMA"
+    },
+    {
+        "city": "Cần Thơ",
+        "abbr": "CTH"
+    },
+    {
+        "city": "Cao Bằng",
+        "abbr": "CBA"
+    },
+    {
+        "city": "Đắk Lắk",
+        "abbr": "DLA"
+    },
+    {
+        "city": "Đắk Nông",
+        "abbr": "DNO"
+    },
+    {
+        "city": "Đà Nẵng",
+        "abbr": "DNG"
+    },
+    {
+        "city": "Điện Biên",
+        "abbr": "DBI"
+    },
+    {
+        "city": "Đồng Nai",
+        "abbr": "DNI"
+    },
+    {
+        "city": "Đồng Tháp",
+        "abbr": "DTH"
+    },
+    {
+        "city": "Gia Lai",
+        "abbr": "GLA"
+    },
+    {
+        "city": "Hà Giang",
+        "abbr": "HGG"
+    },
+    {
+        "city": "Hải Dương",
+        "abbr": "HDU"
+    },
+    {
+        "city": "Hải Phòng",
+        "abbr": "HPH"
+    },
+    {
+        "city": "Hà Nam",
+        "abbr": "HNA"
+    },
+    {
+        "city": "Hà Nội",
+        "abbr": "HNO"
+    },
+    {
+        "city": "Hà Tĩnh",
+        "abbr": "HTI"
+    },
+    {
+        "city": "Hậu Giang",
+        "abbr": "HAU"
+    },
+    {
+        "city": "Hòa Bình",
+        "abbr": "HBI"
+    },
+    {
+        "city": "Hưng Yên",
+        "abbr": "HYE"
+    },
+    {
+        "city": "Khánh Hòa",
+        "abbr": "KHO"
+    },
+    {
+        "city": "Kiên Giang",
+        "abbr": "KGI"
+    },
+    {
+        "city": "Kon Tum",
+        "abbr": "KTU"
+    },
+    {
+        "city": "Lai Châu",
+        "abbr": "LCH"
+    },
+    {
+        "city": "Lâm Đồng",
+        "abbr": "LDO"
+    },
+    {
+        "city": "Lạng Sơn",
+        "abbr": "LSO"
+    },
+    {
+        "city": "Lào Cai",
+        "abbr": "LCA"
+    },
+    {
+        "city": "Long An",
+        "abbr": "LAN"
+    },
+    {
+        "city": "Nam Định",
+        "abbr": "NDI"
+    },
+    {
+        "city": "Nghệ An",
+        "abbr": "NAN"
+    },
+    {
+        "city": "Ninh Bình",
+        "abbr": "NBI"
+    },
+    {
+        "city": "Ninh Thuận",
+        "abbr": "NTH"
+    },
+    {
+        "city": "Phú Thọ",
+        "abbr": "PTH"
+    },
+    {
+        "city": "Phú Yên",
+        "abbr": "PYE"
+    },
+    {
+        "city": "Quảng Bình",
+        "abbr": "QBI"
+    },
+    {
+        "city": "Quảng Nam",
+        "abbr": "QNA"
+    },
+    {
+        "city": "Quảng Ngãi",
+        "abbr": "QNG"
+    },
+    {
+        "city": "Quảng Ninh",
+        "abbr": "QNI"
+    },
+    {
+        "city": "Quảng Trị",
+        "abbr": "QTR"
+    },
+    {
+        "city": "Sóc Trăng",
+        "abbr": "STR"
+    },
+    {
+        "city": "Sơn La",
+        "abbr": "SLA"
+    },
+    {
+        "city": "Tây Ninh",
+        "abbr": "TNI"
+    },
+    {
+        "city": "Thái Bình",
+        "abbr": "TBI"
+    },
+    {
+        "city": "Thái Nguyên",
+        "abbr": "TNG"
+    },
+    {
+        "city": "Thanh Hóa",
+        "abbr": "THO"
+    },
+    {
+        "city": "Thành Phố Hồ Chí Minh",
+        "abbr": "HCM"
+    },
+    {
+        "city": "Thừa Thiên - Huế",
+        "abbr": "TTH"
+    },
+    {
+        "city": "Tiền Giang",
+        "abbr": "TGI"
+    },
+    {
+        "city": "Trà Vinh",
+        "abbr": "TVI"
+    },
+    {
+        "city": "Tuyên Quang",
+        "abbr": "TQU"
+    },
+    {
+        "city": "Vĩnh Long",
+        "abbr": "VLO"
+    },
+    {
+        "city": "Vĩnh Phúc",
+        "abbr": "VPH"
+    },
+    {
+        "city": "Yên Bái",
+        "abbr": "YBA"
+    }
+]
