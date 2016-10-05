@@ -8,7 +8,7 @@ var StoreSchema = new Schema({
   info: String,
   active: Boolean,
   address: String,
-  cityId: Number,
+  cityId: String,
   imgUrl: String,
   userId: { type: String, required: true},
   categoryId: Number,
