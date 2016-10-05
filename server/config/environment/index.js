@@ -45,14 +45,14 @@ var all = {
   },
 
   facebook: {
-    clientID:     process.env.FACEBOOK_ID || 'id',
-    clientSecret: process.env.FACEBOOK_SECRET || 'secret',
+    clientID:     process.env.FACEBOOK_ID || '658442930940076',
+    clientSecret: process.env.FACEBOOK_SECRET || 'e9332819c8c7e12ef78d315b1824c7cd',
     callbackURL:  (process.env.DOMAIN || '') + '/auth/facebook/callback'
   },
 
   google: {
-    clientID:     process.env.GOOGLE_ID || 'id',
-    clientSecret: process.env.GOOGLE_SECRET || 'secret',
+    clientID:     process.env.GOOGLE_ID || '403136864361-ecso61meoqqpk96ju75thjrq8tqphif4.apps.googleusercontent.com',
+    clientSecret: process.env.GOOGLE_SECRET || 'r6JiefbC7sjcl8-FEGsvsbWn',
     callbackURL:  (process.env.DOMAIN || '') + '/auth/google/callback'
   }
 };
