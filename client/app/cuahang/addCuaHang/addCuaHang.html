@@ -21,7 +21,7 @@
         <div class="form-group">
             <select ng-model="categoryId">
                     <option ng-repeat-start="category in listOfCategories" ng-bind="category.MenuName" ng-disabled="true"></option>
-                    <option ng-repeat-end ng-repeat="menu in category.Menus" value="{{menu.MenuId}}">{{menu.MenuName}}</option>
+                    <option ng-repeat-end ng-repeat="menu in category.Menus" value="{{menu.MenuId}}">{{menu.subMenu}}</option>
             </select>
         </div>
         <button class="btn btn-lg btn-primary" type="submit">Lưu</button>
