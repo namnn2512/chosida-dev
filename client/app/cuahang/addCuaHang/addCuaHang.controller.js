@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('chosidaApp')
-    .controller('AddStoreCtrl', function ($scope, ManageStore) {
+    .controller('AddStoreCtrl', function ($scope, $http, ManageStore) {
         $scope.errors = {};
         $scope.listOfCategories = {};
 
