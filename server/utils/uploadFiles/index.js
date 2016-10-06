@@ -34,7 +34,7 @@ module.exports = function(app) {
                  res.json({error_code:1,err_desc:err});
                  return;
             }
-             res.json({error_code:0,err_desc:null,file:request.file});
+             res.json({error_code:0,err_desc:null,file:req.file});
         });
     });
 };
