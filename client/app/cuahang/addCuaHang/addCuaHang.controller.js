@@ -48,6 +48,7 @@ angular.module('chosidaApp')
                         console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ');
                     } else {
                         console.log('an error occured');
+                      console.log(resp);
                     }
                 }, function (resp) { //catch error
                     console.log('Error status: ' + resp.status);
