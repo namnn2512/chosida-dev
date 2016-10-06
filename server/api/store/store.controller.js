@@ -39,8 +39,13 @@ exports.getListStoresbyUserId = function(req, res) {
 
 // Creates a new store in the DB.
 exports.create = function(req, res) {
-  Store.create(req.body, function(err, store) {
-    if(err) { return handleError(res, err); }
+  var newStore = new Store(req.body);
+  newStore.userId = req.user._id;
+  var menu = require("../../config/menu.json");
+  Store.create(newStore, function(err, store) {
+    if(err) { 
+        return handleError(res, err); 
+    }
     return res.status(201).json(store);
   });
 };
