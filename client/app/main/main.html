@@ -6,19 +6,19 @@
           <h1>Fashion</h1>
           <hr>
         </div>
-        <div ng-repeat="item in [1,2,3,4,5,6,7,8] track by $index">
+        <div ng-repeat="store in stores">
           <div class="col-md-3 col-xs-12 col-sm-6">
             <div class="thumbnail">
-              <a ng-click="goDetail()"><h3>{{awesomeThings[0].name}}</h3></a>
+              <a ng-click="goDetail()"><h3>{{store.name}}</h3></a>
               <div class="hovereffect">
-                <a href="#"><img src="{{awesomeThings[0].image}}" alt=""></a>
+                <a href="#"><img src="{{store.imgUrl}}" alt=""></a>
                 <div class="overlay">
-                  <h2>{{awesomeThings[0].name}}</h2>
+                  <h2>{{store.name}}</h2>
                   <a class="info" ng-click="goDetail()">See Detail</a>
                 </div>
               </div>
               <div class="caption">
-                <p>{{awesomeThings[0].description}}</p>
+                <p>{{store.info}}</p>
               </div>
             </div>
           </div>
