@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('chosidaApp')
-    .factory('UploadFile', ['Upload', function (Upload) {
+    .factory('UploadFile', function (Upload) {
         return {
             // submit: function (vm) { //function to call on form submit
             //     if (vm.upload_form.file.$valid && vm.file) { //check if from is valid
@@ -32,4 +32,4 @@ angular.module('chosidaApp')
                 // });
             }
         };
-    }]);
+    });
