@@ -6,6 +6,9 @@ angular.module('chosidaApp')
         $scope.errors = {};
         $scope.listOfCategories = {};
         $scope.cities = {};
+        $scope.isHasImage = false;
+        $scope.imageUrl = '';
+        $scope.noImage = 'assets/images/noImage.gif';
         $http.get('/menu').then(function(response) {
             $scope.listOfCategories = response.data;
         }, function(response) {
@@ -20,13 +23,13 @@ angular.module('chosidaApp')
 
         $scope.addNewStore = function(form) {
             $scope.submitted = true;
-            if (form.$valid) {
+            if (form.$valid && $scope.isHasImage && $scope.imageUrl.length > 0) {
                 ManageStore.createStore({
                     name: $scope.store.name,
                     info: $scope.store.info,
                     address: $scope.store.address,
                     cityId: $scope.store.cityId,
-                    imgUrl: $scope.store.imgUrl,
+                    imgUrl: $scope.imageUrl,
                     categoryId: $scope.store.categoryId,
                 })
                     .then(function() {
@@ -41,12 +44,16 @@ angular.module('chosidaApp')
         };
   
         $scope.uploadImage = function () {
-            if ($scope.upload_form.file.$valid && $scope.file) { //check if from is valid
+            if ($scope.form.file.$valid && $scope.file) { //check if from is valid
                 UploadFile.upload($scope.file) //call upload function
                 .then(function (resp) { //upload function returns a promise
                     if (resp.data.error_code === 0) { //validate success
-                        console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ');
                         console.log(resp.data);
+                        if(resp.data && resp.data.file && resp.data.file.filename){
+                            $scope.imageUrl = 'assets/images/' + resp.data.file.filename;
+                            $scope.isHasImage = true;
+                        }
+                               
                     } else {
                         console.log('an error occured');
                       console.log(resp);
