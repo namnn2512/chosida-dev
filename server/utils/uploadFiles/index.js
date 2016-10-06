@@ -1,4 +1,5 @@
 var multer = require('multer');
+var path = require('path');
 module.exports = function(app) {
 //    app.use(function(req, res, next) { //allow cross origin requests
 //        res.setHeader("Access-Control-Allow-Methods", "POST, PUT, OPTIONS, DELETE, GET");
@@ -14,7 +15,7 @@ module.exports = function(app) {
 
     var storage = multer.diskStorage({ //multers disk storage settings
         destination: function (req, file, cb) {
-            cb(null, '../../client/assets/images');
+            cb(null, path.resolve(app.get('appPath') + '/assets/images/'));
         },
         filename: function (req, file, cb) {
             var datetimestamp = Date.now();
