@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('chosidaApp', ['ngFileUpload'])
+angular.module('chosidaApp')
     .factory('UploadFile', ['Upload', function (Upload) {
         return {
             // submit: function (vm) { //function to call on form submit
