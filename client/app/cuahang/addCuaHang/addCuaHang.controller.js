@@ -46,6 +46,7 @@ angular.module('chosidaApp')
                 .then(function (resp) { //upload function returns a promise
                     if (resp.data.error_code === 0) { //validate success
                         console.log('Success ' + resp.config.data.file.name + 'uploaded. Response: ');
+                        console.log(resp.data);
                     } else {
                         console.log('an error occured');
                       console.log(resp);
