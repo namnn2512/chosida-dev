@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('chosidaApp')
-    .controller('AddStoreCtrl', function($scope, $http, ManageStore, Auth) {
+    .controller('AddStoreCtrl', function($scope, $http, ManageStore, UploadFile) {
         $scope.store = {};
         $scope.errors = {};
         $scope.listOfCategories = {};
