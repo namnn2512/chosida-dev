@@ -2,7 +2,7 @@
     <form class="form" name="form" ng-submit="addNewStore(form)" novalidate>
 
         <div class="form-group">
-            <label>Tên cửa hàng:</label>
+            <label class="control-label">Tên cửa hàng:</label>
             <input type="text" name="name" class="form-control" ng-model="store.name" ng-maxlength="30" maxlength="30" required/>
             <p class="help-block" ng-show="form.name.$error.required && submitted">
                 Thông tin bắt buộc
@@ -12,48 +12,54 @@
             </p>
         </div>
         <div class="form-group">
-            <label>Thông tin cửa hàng:</label>
+            <label class="control-label">Thông tin cửa hàng:</label>
             <input type="text" name="info" class="form-control" ng-model="store.info" ng-maxlength="150" maxlength="150" />
             <p class="help-block" ng-show="form.name.$error.maxlength">
                 Nhập tối đa 150 kí tự
             </p>
         </div>
         <div class="form-group">
-            <label>Địa chỉ:</label>
+            <label class="control-label">Địa chỉ:</label>
             <input type="text" name="address" class="form-control" ng-model="store.address" ng-maxlength="250" maxlength="250" />
             <p class="help-block" ng-show="form.name.$error.maxlength">
                 Nhập tối đa 250 kí tự
             </p>
         </div>
         <div class="form-group">
-            <label>Thành phố/ tỉnh</label>
-            <select name="cityId" ng-model="store.cityId">
-                    <option value="">-- Chọn thành phố/ tỉnh --</option>
-                    <option ng-repeat="c in cities" value="{{c.abbr}}">{{c.city}}</option>
+            <label class="control-label">Thành phố/ tỉnh:</label>
+            <select class="form-group" name="cityId" ng-model="store.cityId">
+                <option value="">-- Chọn thành phố/ tỉnh --</option>
+                <option ng-repeat="c in cities" value="{{c.abbr}}">{{c.city}}</option>
             </select>
         </div>
         <div class="form-group">
-            <label>Loại hàng kinh doanh</label>
-            <select name="categoryId" ng-model="store.categoryId">
-                    <option value="">-- Chọn mặt hàng --</option>
-                    <option ng-repeat-start="category in listOfCategories" ng-bind="category.MenuName" ng-disabled="true"></option>
-                    <option ng-repeat-end ng-repeat="menu in category.Menus" value="{{menu.MenuId}}">{{menu.subMenu}}</option>
+            <label class="control-label">Loại hàng kinh doanh:</label>
+            <select class="form-group" name="categoryId" ng-model="store.categoryId">
+                <option value="">-- Chọn mặt hàng --</option>
+                <option ng-repeat-start="category in listOfCategories" ng-bind="category.MenuName" ng-disabled="true"></option>
+                <option ng-repeat-end ng-repeat="menu in category.Menus" value="{{menu.MenuId}}">{{menu.subMenu}}</option>
             </select>
         </div>
-        
+        <div>
+            <label class="control-label">Hình ảnh cửa hàng:</label>
+            <label for="file-upload" class="custom-file-upload">
+                <i class="fa fa-cloud-upload"></i> Chọn hình ảnh
+            </label>
+            <input type="file" id="file-upload" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB"
+            ng-change="uploadImage()" /><img style="width:100px;" ng-show="!!file" ngf-thumbnail="file || noImage" />
+            <p ng-show="file.$error.required">*required</p>
+            <br>
+            <p ng-show="file.$error.maxSize">File too large {{file.size / 1000000|number:1}}MB: max 20M</p>
+        </div>
+
         <button class="btn btn-lg btn-primary" type="submit">Lưu</button>
     </form>
-  
-    <form name="upload_form">
-        Single Image with validations
-        <input type="file" ngf-select ng-model="file" name="file" ngf-pattern="'image/*'" accept="image/*" ngf-max-size="20MB" ng-change="uploadImage()"/>        Image thumbnail: <img style="width:100px;" ng-show="!!file" ngf-thumbnail="file || '/thumb.jpg'" />
-        <i ng-show="upload_form.file.$error.required">*required</i><br>
-        <i ng-show="upload_form.file.$error.maxSize">File too large 
-            {{file.size / 1000000|number:1}}MB: max 20M</i>
-        <!--  Multiple files
-            <div class="button" ngf-select ng-model="up.files" ngf-multiple="true">Select</div>
-            Drop files: <div ngf-drop ng-model="up.files" class="drop-box">Drop</div> -->
-        <button type="submit" ng-click="uploadImage()">submit</button>
+
+    <!--<form name="upload_form">
+        Multiple files
+        <div class="button" ngf-select ng-model="up.files" ngf-multiple="true">Select</div>
+        Drop files:
+        <div ngf-drop ng-model="up.files" class="drop-box">Drop</div>
         <p>{{progress}}</p>
-    </form>
+    </form>-->
 </div>
