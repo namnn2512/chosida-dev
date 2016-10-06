@@ -14,7 +14,7 @@ module.exports = function(app) {
 
     var storage = multer.diskStorage({ //multers disk storage settings
         destination: function (req, file, cb) {
-            cb(null, '../../../client/assets/images');
+            cb(null, '../../client/assets/images');
         },
         filename: function (req, file, cb) {
             var datetimestamp = Date.now();
