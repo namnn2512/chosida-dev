@@ -9,6 +9,7 @@ angular.module('chosidaApp')
         $scope.isHasImage = false;
         $scope.imageUrl = '';
         $scope.noImage = 'assets/images/noImage.gif';
+  
         $http.get('/menu').then(function(response) {
             $scope.listOfCategories = response.data;
         }, function(response) {
@@ -24,13 +25,25 @@ angular.module('chosidaApp')
         $scope.addNewStore = function(form) {
             $scope.submitted = true;
             if (form.$valid && $scope.isHasImage && $scope.imageUrl.length > 0) {
+              
+               //get parent categoryId
+                angular.forEach($scope.listOfCategories, function (c, i) {
+                    angular.forEach(c.Menus, function (m, i) {
+                        if (m.categoryId === $scope.store.categoryId) {
+                            $scope.store.parentCategoryId = m.parentCategoryId;
+                            console.log($scope.store.parentCategoryId);
+                        }
+                    });          
+                });
+              
                 ManageStore.createStore({
                     name: $scope.store.name,
                     info: $scope.store.info,
                     address: $scope.store.address,
                     cityId: $scope.store.cityId,
                     imgUrl: $scope.imageUrl,
-                    categoryId: $scope.store.categoryId,
+                    parentCategoryId: $scope.store.parentCategoryId,
+                    categoryId: $scope.store.categoryId
                 })
                     .then(function() {
                         $scope.message = 'Thêm cửa hàng thành công.';
