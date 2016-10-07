@@ -28,9 +28,9 @@ angular.module('chosidaApp')
               
                //get parent categoryId
                 angular.forEach($scope.listOfCategories, function (c, i) {
-                    angular.forEach(c.Menus, function (m, i) {
-                        if (m.categoryId === $scope.store.categoryId) {
-                            $scope.store.parentCategoryId = m.parentCategoryId;
+                    angular.forEach(c.Menus, function (m, j) {
+                        if (m.MenuId === $scope.store.categoryId) {
+                            $scope.store.parentCategoryId = m.ParentID;
                             console.log($scope.store.parentCategoryId);
                         }
                     });          
