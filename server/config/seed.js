@@ -9,4 +9,3 @@ var Store = require('../api/store/store.model');
 //var User = require('../api/user/user.model');
 
 Store.find({}).remove();
-});
