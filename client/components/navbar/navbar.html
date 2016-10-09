@@ -1,55 +1,103 @@
 <section id="header">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <!-- header Nav Start -->
-                <nav class="navbar navbar-default">
-                    <div class="container">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-                            <a class="navbar-brand" href="/">
-                    chosida
-                </a>
-                        </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <ul class="nav navbar-nav">
-                                 <li ng-repeat="item in $ctrl.menu" ui-sref-active="active">
-                                    <a ui-sref="{{item.state}}">{{item.title}}</a>
-                                </li>
-                                <li ng-show="$ctrl.isAdmin()" ui-sref-active="active" class="dropdown">
-                                    <a data-toggle="dropdown" class="dropdown-toggle">Admin<b class="caret"></b></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a ui-sref="manageuser">Manage User</a></li>
-                                        <li><a ui-sref="managecategory">Manage Category</a></li>
-                                    </ul>
-                                </li>
-                            </ul>
-                            <ul class="nav navbar-nav left-small">
-                              <li><a href="#">Link2</a></li>
-                              <li><a href="#">Link3</a></li>
-                              <li><a href="#">Link4</a></li>
-                              <li><a href="#">Link5</a></li>
-                            </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li>
-                                <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li>
-                                <li ng-show="$ctrl.isLoggedIn()">
-                                    <p class="navbar-text">Hello {{ $ctrl.getCurrentUser().name }}</p>
-                                </li>
-                                <li ng-show="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
-                                <li ng-show="$ctrl.isLoggedIn()"><a ui-sref="logout">Logout</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- header Nav Start -->
+        <nav class="navbar navbar-default" role="navigation">
+          <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="/">
+                <i class="fa fa-suitcase" aria-hidden="true"></i>chosida
+              </a>
             </div>
-        </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav">
+                <li ng-repeat="item in menu" ui-sref-active="active">
+                  <a ui-sref="{{item.state}}">{{item.title}}</a>
+                </li>
+                <li ng-show="isAdmin()" ui-sref-active="active" class="dropdown">
+                  <a data-toggle="dropdown" class="dropdown-toggle">Admin<b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a ui-sref="manageuser">Manage User</a></li>
+                    <li><a ui-sref="managecategory">Manage Category</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav navbar-nav left-small">
+                <li><a href="#">Link2</a></li>
+                <li><a href="#">Link3</a></li>
+                <li><a href="#">Link4</a></li>
+                <li><a href="#">Link5</a></li>
+              </ul>
+              <ul class="nav navbar-nav navbar-right">
+                <!-- <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="signup">Sign up</a></li> -->
+                <li class="dropdown" ng-hide="isLoggedIn()">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Account</b> <span class="caret"></span></a>
+                  <ul id="login-dp" class="dropdown-menu">
+                    <li>
+                      <div class="row">
+                        <div class="col-md-12">
+                          <p>Login via</p>
+                          <div class="social-buttons">
+                            <a class="btn btn-fb" ng-click="loginOauth('facebook')"><i class="fa fa-facebook"></i> Facebook</a>
+                            <a ng-click="loginOauth('google')" class="btn btn-gg"><i class="fa fa-google-plus"></i> Google</a>
+                          </div>
+                          or
+                          <form class="form" name="form" ng-submit="login(form)" novalidate>
+                            <div class="form-group">
+                              <label class="sr-only">Email address</label>
+                              <input type="email" class="form-control" placeholder="Email address" name="email" ng-model="user.email" required>
+                            </div>
+                            <div class="form-group">
+                              <label class="sr-only">Password</label>
+                              <input type="password" class="form-control" placeholder="Password" name="password" ng-model="user.password" required>
+                              <div class="help-block text-right"><a href="">Forget the password ?</a></div>
+                            </div>
+                            <div class="form-group has-error">
+                              <p class="help-block" ng-show="form.email.$error.required && form.password.$error.required && submitted">
+                                Please enter your email and password.
+                              </p>
+                              <p class="help-block" ng-show="form.email.$error.email && submitted">
+                                Please enter a valid email.
+                              </p>
+                              <p class="help-block">{{ errors.other }}</p>
+                            </div>
+                            <div class="form-group">
+                              <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                            </div>
+                            <div class="checkbox">
+                              <label>
+                                <input type="checkbox"> Keep me logged-in
+                              </label>
+                            </div>
+                          </form>
+                        </div>
+                        <div class="bottom text-center">
+                          New here ? <a ui-sref="signup"><b>Join Us</b></a>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </li>
+                <!-- <li ng-hide="$ctrl.isLoggedIn()" ui-sref-active="active"><a ui-sref="login">Login</a></li> -->
+                <li ng-show="isLoggedIn()">
+                  <p class="navbar-text">Hello {{ getCurrentUser().name }}</p>
+                </li>
+                <li ng-show="isLoggedIn()" ui-sref-active="active"><a ui-sref="settings"><span class="glyphicon glyphicon-cog"></span></a></li>
+                <li ng-show="isLoggedIn()"><a ui-sref="logout">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
     </div>
+  </div>
 </section>

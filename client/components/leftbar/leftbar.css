@@ -18,6 +18,9 @@
     list-style: none;
     padding-top: 10px;
 }
+#leftbar .navbar-default ul li {
+    padding-right: 15px;
+}
 
 #leftbar .navbar-default .navbar-nav li > a {
     text-decoration: none;
