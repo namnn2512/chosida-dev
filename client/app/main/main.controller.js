@@ -3,7 +3,7 @@
 angular.module('chosidaApp')
   .controller('MainCtrl', function ($state, $scope, Store) {
     $scope.stores = Store.query(function(){
-        if($scope.stores.length == 0){
+        if(angular.isUndefined($scope.stores) || $scope.stores.length == 0){
             $scope.stores = [{
                 name: 'Addidas',
                 imgUrl: 'assets/images/iphone.jpg',

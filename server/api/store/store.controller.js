@@ -41,7 +41,7 @@ exports.getListStoresbyUserId = function(req, res) {
 exports.create = function(req, res) {
   var newStore = new Store(req.body);
   newStore.userId = req.user._id;
-  var menu = require("../../config/menu.json");
+  var menu = require("../config/menu.json");
   Store.create(newStore, function(err, store) {
     if(err) { 
         return handleError(res, err); 
