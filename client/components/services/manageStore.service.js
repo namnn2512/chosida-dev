@@ -6,16 +6,8 @@ angular.module('chosidaApp')
 
         return {
 
-            createStore: function (store, callback) {
-                var cb = callback || angular.noop;
-
-                return Store.save(store,
-                    function (data) {
-                        return cb(store);
-                    },
-                    function (err) {
-                        return cb(err);
-                    }).$promise;
+            createStore: function (store) {
+                return Store.insertStore(store);
             },
 
             getStoresbyUserId: function (callback) {
