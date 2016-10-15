@@ -225,6 +225,7 @@ module.exports = function (grunt) {
             '!<%= yeoman.dist %>/public/bower_components/animate.css',
             '<%= yeoman.dist %>/public/bower_components/animate.css/animate.css',
             '<%= yeoman.dist %>/public/assets/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            '!<%= yeoman.dist %>/public/assets/images/iphone.jpg',
             '<%= yeoman.dist %>/public/assets/icons/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/public/assets/iconsets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/public/assets/fonts/*'
