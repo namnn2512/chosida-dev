@@ -80,13 +80,20 @@ exports.destroy = function(req, res) {
 exports.getStoreswithPaging = function(req, res) {
     var location = req.body.location;
     var categoryId = req.body.categoryId;
+    var parentCategoryId = req.body.parentCategoryId;
     var paging = req.body.paging;
-    
-    
-    var query = {cityId : location, categoryId :categoryId}
+
+
+    var query = {};
+    if (categoryId === parentCategoryId) {
+        query = { cityId: location, parentCategoryId: parentCategoryId };
+    } else {
+        query = { cityId: location, categoryId :categoryId }
+    }
+
     Store.find(query)
         .skip(paging.pagesize * (paging.pagenum - 1))
-        .limit(paging.pagesize).sort({ name: -1 })
+        .limit(paging.pagesize).sort({ name: 1 })
         .exec(function(err, stores) {
             Store.count(query).exec(function(err, count) {
                 return res.status(200).json({ stores: stores, total: count });

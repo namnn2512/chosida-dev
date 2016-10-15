@@ -9,8 +9,14 @@ angular.module('chosidaApp')
         $scope.total = 0;
         $scope.stores = {};
         
+        $scope.location = 'DNG';
+        $scope.categoryId = angular.isUndefined($stateParams.categoryId) ? 1 : $stateParams.categoryId;
+        $scope.parentCategoryId = angular.isUndefined($stateParams.parentCategoryId) ? 1 : $stateParams.parentCategoryId;
+        
         $scope.getListStores = function() {
-            Store.getAllStore('DNG', angular.isUndefined($stateParams.categoryId) ? 1 : $stateParams.categoryId, { pagesize: $scope.numPerPage, pagenum: $scope.currentPage })
+            Store.getAllStore($scope.location, $scope.categoryId
+                                , $scope.parentCategoryId
+                                , { pagesize: $scope.numPerPage, pagenum: $scope.currentPage })
                 .then(
                 function(response) {
                     $scope.stores = response.data.stores;

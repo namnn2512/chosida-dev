@@ -22,10 +22,11 @@ angular.module('chosidaApp')
         var urlBase = '/api/stores';
         var storeFactory = {};
 
-        storeFactory.getAllStore = function(location, categoryId, paging) {
+        storeFactory.getAllStore = function(location, categoryId, parentCategoryId, paging) {
             var data = {};
             data.location = location;
             data.categoryId = categoryId;
+            data.parentCategoryId = parentCategoryId;
             data.paging = paging;
             return $http.post(urlBase + '/getAllStore', data);
         };

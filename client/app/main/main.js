@@ -12,7 +12,7 @@ angular.module('chosidaApp')
             .state('thoitrang', {
                 url: '/thoi-trang',
                 //abstract: true,
-                params : { categoryId: '1', },
+                params : { categoryId: '1', parentCategoryId: '1'},
                 templateUrl: 'app/main/main.html',
                 controller: 'MainCtrl'
             })
