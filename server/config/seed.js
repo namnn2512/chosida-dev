@@ -28,7 +28,7 @@ Store.find({}).remove(function(err, removed) {
         var ans1 = pad.substring(0, pad.length - j.toString().length) + j.toString()
 
         Store.create({
-            name: 'giày dép' + ans1,
+            name: 'Giày dép ' + ans1,
             imgUrl: 'assets/images/iphone.jpg',
             info: 'Chuyên thời trang thể thao',
             cityId: 'DNG',
