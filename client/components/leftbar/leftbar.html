@@ -2,10 +2,10 @@
   <div class="navbar navbar-default navbar-fixed-left">
     <ul class="nav navbar-nav">
       <li ng-repeat="item in leftbar.menu" ui-sref-active="active">
-      	<a href="#" class="parent-menu">{{item.MenuName}}</a>
+      	<a href="#" ui-sref="{{item.MenuState}}"  class="parent-menu">{{item.MenuName}}</a>
       	<ul class="collapse">
-      		<li ui-sref="thoitrang-subitem" class="li-sub-item" ng-repeat="subitem in item.Menus">
-      			<a class="sub-text" ui-sref="thoitrang" href="#">{{subitem.subMenu}}</a>
+      		<li class="li-sub-item" ng-repeat="subitem in item.Menus">
+      			<a class="sub-text" ui-sref="{{subitem.MenuState}}" href="#">{{subitem.subMenu}}</a>
       		</li>
       	</ul>
       </li>
