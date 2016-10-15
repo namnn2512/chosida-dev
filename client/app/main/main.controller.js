@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('chosidaApp')
-    .controller('MainCtrl', function($state, $scope, Store) {
+    .controller('MainCtrl', function($stateParams, $state, $scope, Store) {
 
         $scope.currentPage = 1;
         $scope.numPerPage = 60;
@@ -10,10 +10,9 @@ angular.module('chosidaApp')
         $scope.stores = {};
         
         $scope.getListStores = function() {
-            Store.getAllStore('DNG', '2', { pagesize: $scope.numPerPage, pagenum: $scope.currentPage })
+            Store.getAllStore('DNG', angular.isUndefined($stateParams.categoryId) ? 1 : $stateParams.categoryId, { pagesize: $scope.numPerPage, pagenum: $scope.currentPage })
                 .then(
                 function(response) {
-                    console.log(response);
                     $scope.stores = response.data.stores;
                     $scope.total = response.data.total;
                 },
