@@ -24,7 +24,6 @@
 
 #leftbar .navbar-default .navbar-nav li > a {
     text-decoration: none;
-    width: 70px;
     -webkit-transition: 0.5s ease;
     transition: 0.5s ease;
     text-overflow: ellipsis;
@@ -32,20 +31,18 @@
     margin-left: 5px;
 }
 
-#leftbar .navbar-default .navbar-nav li:hover .parent-menu {
-    -webkit-transition: 0.7s ease;
-    transition: 0.7s ease;
-    width: 150px;
-    border-bottom: solid 2px;
-    border-bottom-color: #1aace3;
-    color: #1aace3;
+#leftbar .navbar-default .navbar-nav li:hover i {
+    -ms-transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    -webkit-transition: 0.5s ease;
+    transition: 0.5s ease;
 }
-
 #leftbar .navbar-default .navbar-nav li:hover .collapse {
     display: block;
     height: auto;
     background-color: #fff;
-    z-index: 10000;
+    z-index: 10000;    
 }
 
 #leftbar .navbar-default .navbar-nav .sub-text {
