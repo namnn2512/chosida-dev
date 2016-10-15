@@ -1,100 +1,222 @@
 [
     {
-        "MenuId":1,
-        "MenuName":"Thời trang",
-        "MenuState":null,
-        "ParentID":1,
-        "SortOrder":1,
-        "ModuleId":null,
-        "Menus":[{
-            "MenuId":2,
-            "subMenu":"Quần Áo",
-            "MenuState":null,
-            "ParentID":1,
-            "SortOrder":1,
-            "ModuleId":null
+        "MenuId": 1,
+        "MenuName": "Thời trang",
+        "MenuState": {
+            "name": "thoitrang",
+            "value": {
+                "url": "/thoi-trang",
+                "params": {
+                    "categoryId": "1"
+                },
+                "templateUrl": "app/main/main.html",
+                "controller": "MainCtrl"
+            }
+        },
+        "ParentID": 1,
+        "SortOrder": 1,
+        "ModuleId": null,
+        "Menus": [
+            {
+                "MenuId": 2,
+                "subMenu": "Quần Áo",
+                "MenuState": {
+                    "name": "quanao",
+                    "value": {
+                        "url": "/thoi-trang/quan-ao",
+                        "params": {
+                            "categoryId": "2"
+                        },
+                        "templateUrl": "app/main/main.html",
+                        "controller": "MainCtrl"
+                    }
+                },
+                "ParentID": 1,
+                "SortOrder": 1,
+                "ModuleId": null
             },
             {
-            "MenuId":3,
-            "subMenu":"Giày dép",
-            "MenuState":null,
-            "ParentID":1,
-            "SortOrder":2,
-            "ModuleId":null
+                "MenuId": 3,
+                "subMenu": "Giày dép",
+                "MenuState": {
+                    "name": "giaydep",
+                    "value": {
+                        "url": "/thoi-trang/giay-dep",
+                        "params": {
+                            "categoryId": "3"
+                        },
+                        "templateUrl": "app/main/main.html",
+                        "controller": "MainCtrl"
+                    }
+                },
+                "ParentID": 1,
+                "SortOrder": 2,
+                "ModuleId": null
             },
             {
-            "MenuId":4,
-            "subMenu":"Phụ kiện",
-            "MenuState":null,
-            "ParentID":1,
-            "SortOrder":2,
-            "ModuleId":null
+                "MenuId": 4,
+                "subMenu": "Phụ kiện",
+                "MenuState": {
+                    "name": "phukien",
+                    "value": {
+                        "url": "/thoi-trang/phu-kien",
+                        "params": {
+                            "categoryId": "4"
+                        },
+                        "templateUrl": "app/main/main.html",
+                        "controller": "MainCtrl"
+                    }
+                },
+                "ParentID": 1,
+                "SortOrder": 2,
+                "ModuleId": null
             }
         ]
     },
     {
-        "MenuId":5,
-        "MenuName":"Đồ điện tử",
-        "MenuState":null,
-        "ParentID":2,
-        "SortOrder":2,
-        "ModuleId":null,
-        "Menus":[{
-            "MenuId":6,
-            "subMenu":"Di động",
-            "MenuState":null,
-            "ParentID":2,
-            "SortOrder":1,
-            "ModuleId":null
-            },
-            {
-            "MenuId":7,
-            "subMenu":"Máy tính",
-            "MenuState":null,
-            "ParentID":2,
-            "SortOrder":2,
-            "ModuleId":null
-            },
-            {
-            "MenuId":8,
-            "subMenu":"Laptop",
-            "MenuState":null,
-            "ParentID":2,
-            "SortOrder":2,
-            "ModuleId":null
-            },
-            {
-            "MenuId":9,
-            "subMenu":"Máy ảnh",
-            "MenuState":null,
-            "ParentID":2,
-            "SortOrder":3,
-            "ModuleId":null
-            },
-             {
-            "MenuId":10,
-            "subMenu":"Máy quay",
-            "MenuState":null,
-            "ParentID":2,
-            "SortOrder":4,
-            "ModuleId":null
+        "MenuId": 5,
+        "MenuName": "Đồ điện tử",
+        "MenuState": {
+            "name": "dodientu",
+            "value": {
+                "url": "/dien-tu",
+                "params": {
+                    "categoryId": "5"
+                },
+                "templateUrl": "app/main/main.html",
+                "controller": "MainCtrl"
             }
-            ,
-             {
-            "MenuId":11,
-            "subMenu":"Điện máy",
-            "MenuState":null,
-            "ParentID":2,
-            "SortOrder":4,
-            "ModuleId":null
-            } 
-            ,{
-            "MenuId":12,
-            "subMenu":"Điện lạnh",
-            "MenuState":null,
-            "ParentID":2,
-            "SortOrder":4,
-            "ModuleId":null
+        },
+        "ParentID": 5,
+        "SortOrder": 2,
+        "ModuleId": null,
+        "Menus": [
+            {
+                "MenuId": 6,
+                "subMenu": "Di động",
+                "MenuState": {
+                    "name": "didong",
+                    "value": {
+                        "url": "/dien-tu/di-dong",
+                        "params": {
+                            "categoryId": "6"
+                        },
+                        "templateUrl": "app/main/main.html",
+                        "controller": "MainCtrl"
+                    }
+                },
+                "ParentID": 2,
+                "SortOrder": 1,
+                "ModuleId": null
+            },
+            {
+                "MenuId": 7,
+                "subMenu": "Máy tính",
+                "MenuState": {
+                    "name": "maytinh",
+                    "value": {
+                        "url": "/dien-tu/may-tinh",
+                        "params": {
+                            "categoryId": "7"
+                        },
+                        "templateUrl": "app/main/main.html",
+                        "controller": "MainCtrl"
+                    }
+                },
+                "ParentID": 2,
+                "SortOrder": 2,
+                "ModuleId": null
+            },
+            {
+                "MenuId": 8,
+                "subMenu": "Laptop",
+                "MenuState": {
+                    "name": "laptop",
+                    "value": {
+                        "url": "/dien-tu/lap-top",
+                        "params": {
+                            "categoryId": "8"
+                        },
+                        "templateUrl": "app/main/main.html",
+                        "controller": "MainCtrl"
+                    }
+                },
+                "ParentID": 2,
+                "SortOrder": 2,
+                "ModuleId": null
+            },
+            {
+                "MenuId": 9,
+                "subMenu": "Máy ảnh",
+                "MenuState": {
+                    "name": "mayanh",
+                    "value": {
+                        "url": "/dien-tu/may-anh",
+                        "params": {
+                            "categoryId": "9"
+                        },
+                        "templateUrl": "app/main/main.html",
+                        "controller": "MainCtrl"
+                    }
+                },
+                "ParentID": 2,
+                "SortOrder": 3,
+                "ModuleId": null
+            },
+            {
+                "MenuId": 10,
+                "subMenu": "Máy quay",
+                "MenuState": {
+                    "name": "mayquay",
+                    "value": {
+                        "url": "/dien-tu/may-quay",
+                        "params": {
+                            "categoryId": "10"
+                        },
+                        "templateUrl": "app/main/main.html",
+                        "controller": "MainCtrl"
+                    }
+                },
+     
+                "ParentID": 2,
+                "SortOrder": 4,
+                "ModuleId": null
+            },
+            {
+                "MenuId": 11,
+                "subMenu": "Điện máy",
+                "MenuState": {
+                    "name": "dienmay",
+                    "value": {
+                        "url": "/dien-tu/dien-may",
+                        "params": {
+                            "categoryId": "11"
+                        },
+                        "templateUrl": "app/main/main.html",
+                        "controller": "MainCtrl"
+                    }
+                },
+                "ParentID": 2,
+                "SortOrder": 4,
+                "ModuleId": null
+            },
+            {
+                "MenuId": 12,
+                "subMenu": "Điện lạnh",
+                "MenuState": {
+                    "name": "dienlanh",
+                    "value": {
+                        "url": "/dien-tu/dien-lanh",
+                        "params": {
+                            "categoryId": "12"
+                        },
+                        "templateUrl": "app/main/main.html",
+                        "controller": "MainCtrl"
+                    }
+                },
+                "ParentID": 2,
+                "SortOrder": 4,
+                "ModuleId": null
             }
         ]
     }
