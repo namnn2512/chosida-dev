@@ -6,8 +6,8 @@ angular.module('chosidaApp', [
   'ngSanitize',
   'btford.socket-io',
   'ui.router',
-  'ui.bootstrap',
-  'ngFileUpload'
+  'ui.bootstrap'//,
+  //'ngFileUpload'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
