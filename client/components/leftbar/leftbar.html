@@ -1,14 +1,17 @@
 <section id="leftbar">
-  <div class="navbar navbar-default navbar-fixed-left">
-    <ul class="nav navbar-nav">
-      <li ng-repeat="item in leftbar.menu" ui-sref-active="active">
-      	<a href="#" ui-sref="{{item.MenuState.name}}"  class="parent-menu">{{item.MenuName}}</a>
-      	<ul class="collapse">
-      		<li class="li-sub-item" ng-repeat="subitem in item.Menus">
-      			<a class="sub-text" ui-sref="{{subitem.MenuState.name}}" href="#">{{subitem.subMenu}}</a>
-      		</li>
-      	</ul>
-      </li>
-    </ul>
+  <div class="dropdown-category">
+    <a href="#" data-toggle="dropdown" class="dropdown-toggle">CATEGORIES
+      <i class="fa fa-bars pull-right ms-pt-xs"></i>
+    </a>
   </div>
+  <ul class="dropdown-menu" id="menu1">
+    <li ng-repeat="item in leftbar.menu" ui-sref-active="active">
+      <a href="#" ui-sref="{{item.MenuState.name}}" class="parent-menu">{{item.MenuName}}</a>
+      <ul class="dropdown-menu sub-menu">
+        <li class="li-sub-item" ng-repeat="subitem in item.Menus">
+          <a class="sub-text" ui-sref="{{subitem.MenuState.name}}" href="#">{{subitem.subMenu}}</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
 </section>
