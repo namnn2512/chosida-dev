@@ -1,32 +1,36 @@
 <section id="main">
-  <div class="">
-    <div ng-repeat="item in [1,2,3,4] track by $index">
-      <div class="row">
-        <div class="store-header">
-          <h1>Fashion</h1>
-          <hr>
-        </div>
-        <div ng-repeat="store in stores">
-          <div class="col-md-3 col-xs-12 col-sm-6">
-            <div class="thumbnail">
-              <a ng-click="goDetail()"><h3>{{store.name}}</h3></a>
-              <div class="hovereffect">
-                <a href="#"><img src="{{store.imgUrl}}" alt=""></a>
-                <div class="overlay">
-                  <h2>{{store.name}}</h2>
-                  <a class="info" ng-click="goDetail()">See Detail</a>
-                </div>
-              </div>
-              <div class="caption">
-                <p>{{store.info}}</p>
-              </div>
+    <div class="">
+        <div class="row">
+            <div class="store-header">
+                <h1>Fashion</h1>
+                <hr>
             </div>
-          </div>
+            <div ng-repeat="store in stores">
+                <div class="col-md-2 col-xs-12 col-sm-6">
+                    <div class="thumbnail">
+                        <a ng-click="goDetail()"><h3>{{store.name}}</h3></a>
+                        <div class="hovereffect">
+                            <a href="#"><img ng-src="{{store.imgUrl}}" alt=""></a>
+                            <div class="overlay">
+                                <h2>{{store.name}}</h2>
+                                <a class="info" ng-click="goDetail()">See Detail</a>
+                            </div>
+                        </div>
+                        <div class="caption">
+                            <p>{{store.info}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <ul uib-pagination 
+            total-items="total" 
+            ng-model="currentPage" 
+            max-size="maxSize" 
+            boundary-links="true"
+            items-per-page="numPerPage"
+            ng-show="total > numPerPage">
+            </ul>
         </div>
-        <div class="see-more">
-          <a href="#"><h4>See More>></h4></a>
-        </div>
-      </div>
     </div>
-  </div>
 </section>
