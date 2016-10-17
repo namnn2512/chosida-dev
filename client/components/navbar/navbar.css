@@ -41,10 +41,6 @@
   width: 450px;
 }
 
-#header .left-small {
-  display: none;
-}
-
 #header .header .navbar-default {
   background-color: #38bcc8;
 }
