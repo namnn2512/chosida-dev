@@ -16,12 +16,12 @@
     border-radius: 0px;
 }
 
-.dropdown-menu a {
+#menu1 a {
     padding: 0px !important;
     color:black !important;
 }
 
-.dropdown-menu li {
+#menu1 li {
     padding: 15px !important;
     border-bottom: 1px solid #ccc;
 }
