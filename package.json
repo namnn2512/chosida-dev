@@ -142,8 +142,7 @@
   "scripts": {
     "test": "grunt test",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update",
-    "build": "grunt build",
-    "start": "grunt serve:dist",
+    "start": "grunt serve",
     "postinstall": "bower install && npm cache clean && npm install gruntjs/grunt-contrib-imagemin && npm install -g grunt-cli"
   },
   "private": true
