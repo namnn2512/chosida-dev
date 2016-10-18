@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('chosidaApp')
-    .factory('ManageStore', function Auth($location, $rootScope, $http, Store, Auth, $cookieStore, $q) {
+    .factory('ManageStore', function ($location, $rootScope, $http, Store, Auth, $cookieStore, $q) {
         var currentUser = Auth.getCurrentUser();
 
         return {
