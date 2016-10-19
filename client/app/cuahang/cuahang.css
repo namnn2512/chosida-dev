@@ -107,3 +107,13 @@
   -webkit-transition-delay: .2s;
   transition-delay: .2s;
 }
+.pr-img {
+  position:relative;
+  overflow: hidden;
+  padding-bottom:90%;
+}
+.pr-img img {
+  height: 100%;
+  width :100%;
+  position :absolute;
+}
