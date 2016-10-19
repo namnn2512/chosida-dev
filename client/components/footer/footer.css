@@ -1,6 +1,5 @@
 #footer {
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: #d5f1f4;
     border-radius: 4px;
     font-family: 'Roboto', sans-serif;
     padding: 25px;
@@ -17,7 +16,8 @@
     font-size: 15px;
     margin-bottom: 0;
     margin-top: 10px;
-    color :#666;
+    color :black;
+    letter-spacing: 1px;
 }
 
 #footer ul li {
