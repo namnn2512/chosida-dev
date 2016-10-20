@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('chosidaApp')
-  .controller('ProductDetailController', function ($scopre, $stateParams) {
-    $scopre.store = $stateParams.store; 
-    $scopre.id = $stateParams.id;
-    $scopre.storeDetail= [{
+  .controller('ProductDetailController', function ($scope, $stateParams) {
+    $scope.store = $stateParams.store; 
+    $scope.id = $stateParams.id;
+    $scope.storeDetail= [{
       id : '1',
       name: 'Store Name',
       image : 'assets/images/iphone.jpg',

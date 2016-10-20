@@ -15,7 +15,7 @@ angular.module('chosidaApp')
       .state('sanpham', {
         url: '/cuahang/:store/:id/:idsanpham',
         templateUrl: 'app/cuahang/productDetail/productDetail.html',
-        controller: 'StoreDetailController',
+        controller: 'ProductDetailController',
         params : {
           'store':null,
           'id':null,
