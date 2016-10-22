@@ -4,6 +4,7 @@ angular.module('chosidaApp')
   .controller('ProductDetailController', function ($scope, $stateParams) {
     $scope.store = $stateParams.store; 
     $scope.id = $stateParams.id;
+    $scope.selectedItem = {};
     $scope.storeDetail= [{
       id : '1',
       name: 'Store Name',
@@ -31,4 +32,7 @@ angular.module('chosidaApp')
         subImg : 'assets/images/iphone.jpg'
       }]
     }]
+    $scope.activeImage = function(obj, event) {
+      $scope.selectedItem = event.target.currentSrc.slice(22);
+    }
   });
