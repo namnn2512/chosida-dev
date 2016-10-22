@@ -31,7 +31,8 @@ exports.show = function(req, res) {
 
 // Get a list stores by userid
 exports.getListStoresbyUserId = function(req, res) {
-    Store.find({ userId: req.params.id }, function(err, stores) {
+    var userId = req.user._id;
+    Store.find({ userId: req.user._id }, function(err, stores) {
         if (err) { return handleError(res, err); }
         return res.status(200).json(stores);
     });

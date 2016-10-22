@@ -7,8 +7,8 @@ var auth = require('../../auth/auth.service');
 var router = express.Router();
 
 router.get('/', controller.index);
+router.get('/getStoresByUserId', auth.isAuthenticated(), controller.getListStoresbyUserId);
 router.get('/:id', controller.show);
-router.get('/:id/getStoresByUserId', auth.isAuthenticated(), controller.getListStoresbyUserId);
 router.post('/', auth.isAuthenticated(), controller.create);
 router.post('/getAllStore', controller.getStoreswithPaging);
 router.put('/:id', auth.isAuthenticated(), controller.update);

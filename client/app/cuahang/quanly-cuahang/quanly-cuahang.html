@@ -1,0 +1,32 @@
+<section id="store-detail">
+    <div class="container-fluid">
+
+        <table class="table table-bordered table-hover table-condensed">
+            <thead>
+                <tr>
+                    <th>Tên cửa hàng</th>
+                    <th>Địa chỉ</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="store in listStore" class="editable-row">
+                    <td>
+                        {{store.name}}
+                    </td>
+                    <td>
+                        {{store.address}}
+                    </td>
+                    <td>
+                        <div class="buttons">
+                            <button class="btn btn-primary editable-table-button btn-xs">Edit</button>
+                            <button class="btn btn-success editable-table-button btn-xs">Thêm sản phẩm</button>
+                            <button class="btn btn-danger editable-table-button btn-xs">Delete</button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</section>

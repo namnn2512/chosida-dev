@@ -40,12 +40,16 @@ angular.module('chosidaApp')
         };
 
         storeFactory.updateStore = function(store) {
-            return $http.put(urlBase + '/' + store._id, store)
+            return $http.put(urlBase + '/' + store._id, store);
         };
 
         storeFactory.deleteStore = function(id) {
             return $http.delete(urlBase + '/' + id);
         };
-        
+
+        storeFactory.getStorebyUserId = function() {
+            return $http.get(urlBase + '/' + 'getStoresByUserId');
+        };
+
         return storeFactory;
     });
