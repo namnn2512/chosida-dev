@@ -32,7 +32,23 @@ angular.module('chosidaApp')
         subImg : 'assets/images/iphone.jpg'
       }]
     }]
+    $scope.imageList = [
+    {
+      id: 1 ,
+      imgSrc : 'assets/images/iphone.jpg'
+    }
+    ,
+    {
+      id: 2 ,
+      imgSrc : 'assets/images/screen.png'
+    }
+    ,
+    {
+      id: 3 ,
+      imgSrc : 'assets/images/iphone.jpg'
+    }];
+    $scope.selectedItem = $scope.imageList[1].imgSrc;
     $scope.activeImage = function(obj, event) {
-      $scope.selectedItem = event.target.currentSrc.slice(22);
+      $scope.selectedItem = obj.imgSrc;
     }
   });

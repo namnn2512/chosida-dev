@@ -10,7 +10,6 @@
     function link(scope, element, attrs) {
       scope.$watch('data', function(data) {
         var img = angular.element(element);
-        console.log(img);
         resize();
         function resize() {
           if (scope.data) {
