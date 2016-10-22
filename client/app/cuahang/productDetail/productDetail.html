@@ -4,6 +4,18 @@
       <div class="col-md-7">
         <h1>PRODUCT DETAIL</h1>
         <h3>PRODUCT INFORMATION</h3>
+        <div class="item-thumbnail-list">
+          <div class="item-thumbnail">
+            <slick slides-to-show="1" slides-to-scroll="1"  init-onload="true" dots="true" infinite="true">
+              <div ng-repeat="image in imageList track by $index">
+                <div class="sub-image">
+                  <p>Into slider</p>
+                  <img ng-src="{{image.imgSrc}}" ng-click="activeImage(image,$event)"></img>
+                </div>
+              </div>
+            </slick>
+          </div>
+        </div>
       </div>
       <div class="col-md-5">
         <div class="row right-panel">
@@ -12,16 +24,16 @@
               <img id="zoom_01" src='assets/images/iphone.jpg' data-zoom-image="assets/images/iphone.jpg"/>
             </div> -->
             <div class="pr-img">
-              <img zoom-image src="assets/images/screen.png" data="assets/images/screen.png">
-            </div>
-            <div class="item-thumbnail-list">
-              <div class="item-thumbnail">
-                <div class="sub-image"></div>
-              </div>
+              <img zoom-image ng-src="{{selectedItem}}" data="{{selectedItem}}">
             </div>
           </div>
-        </div>        
+        </div>
       </div>
     </div>
   </div>
 </section>
+<style type="text/css">
+.sub-image .ng-scope .slick-slide {
+  width: 100px;
+}
+</style>
