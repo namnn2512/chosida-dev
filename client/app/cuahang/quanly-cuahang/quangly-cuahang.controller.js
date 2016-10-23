@@ -12,13 +12,16 @@ angular.module('chosidaApp')
         }
 
         $scope.getStore();
-        $scope.deleteStore = function() {
+        $scope.deleteStore = function(id) {
             var dlg = dialogs.confirm('Xác nhận', 'Bạn có muốn xóa cửa hàng này?', { size: 'sm' });
             dlg.result.then(function(btn) {
-                $scope.getStore();
-                $scope.confirmed = 'You thought this quite awesome!';
+                Store.setStoretoInactive(id).then(function(){
+                    $scope.getStore();
+                }, function(){
+                    dialogs.error('Lỗi','Không thể xóa cửa hàng này.');
+                })
             }, function(btn) {
-                $scope.confirmed = 'Shame on you for not thinking this is awesome!';
+                //no event
             });
         };
     });

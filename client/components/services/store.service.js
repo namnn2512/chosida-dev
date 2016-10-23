@@ -50,6 +50,10 @@ angular.module('chosidaApp')
         storeFactory.getStorebyUserId = function() {
             return $http.get(urlBase + '/' + 'getStoresByUserId');
         };
+        
+        storeFactory.setStoretoInactive = function(id) {
+            return $http.put(urlBase + '/' + id + '/inactiveStore');
+        };
 
         return storeFactory;
     });

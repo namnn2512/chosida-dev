@@ -32,7 +32,7 @@ exports.show = function(req, res) {
 // Get a list stores by userid
 exports.getListStoresbyUserId = function(req, res) {
     var userId = req.user._id;
-    Store.find({ userId: req.user._id }, function(err, stores) {
+    Store.find({ userId: req.user._id, active: true }, function(err, stores) {
         if (err) { return handleError(res, err); }
         return res.status(200).json(stores);
     });
@@ -77,6 +77,18 @@ exports.destroy = function(req, res) {
     });
 };
 
+exports.inactiveStore = function(req, res){
+    Store.findById(req.params.id, function(err, store) {
+        if (err) { return handleError(res, err); }
+        if (!store) { return res.status(404).send('Not Found'); }
+        store.active = false;
+        store.save(function(err) {
+            if (err) { return handleError(res, err); }
+            return res.status(200).send('No Content');
+        });
+    });
+};
+
 // Deletes a store from the DB.
 exports.getStoreswithPaging = function(req, res) {
     var location = req.body.location;
@@ -87,9 +99,9 @@ exports.getStoreswithPaging = function(req, res) {
 
     var query = {};
     if (categoryId === parentCategoryId) {
-        query = { cityId: location, parentCategoryId: parentCategoryId };
+        query = { cityId: location, parentCategoryId: parentCategoryId, active: true };
     } else {
-        query = { cityId: location, categoryId :categoryId }
+        query = { cityId: location, categoryId :categoryId, active: true }
     }
 
     Store.find(query)
