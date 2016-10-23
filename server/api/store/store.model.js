@@ -6,7 +6,7 @@ var mongoose = require('mongoose'),
 var StoreSchema = new Schema({
   name: { type: String, required: true},
   info: String,
-  active: { type: Boolean, default: Date.now},
+  active: { type: Boolean, default: true},
   address: String,
   cityId: String,
   imgUrl: String,
